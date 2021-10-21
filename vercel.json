@@ -1,0 +1,12 @@
+{
+    "routes":[
+        {
+            "src" : "/",
+            "dest": "/api/home.js"
+        },
+        {
+            "src" : "/connect",
+            "dest": "/api/home.js"
+        }
+    ]
+}
