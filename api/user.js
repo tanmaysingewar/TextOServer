@@ -53,20 +53,13 @@ module.exports = async (req,res) => {
                 const post_count = await post_db.find({"user._id" : ObjectId(x[0].Value)},{projection : {
                     "_id" : 1
                 }}).count()
-
-                
+                                
                 find =[{
                     ...user_profile,
                     ...{post_count : post_count}
                 }]
             }
 
-            if (!find[0]) {
-                return  res.json({
-                    status : "no_user",
-                    empty : true
-                })
-            }
 
             if(find){
                 return res.json({
